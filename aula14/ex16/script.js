@@ -1,13 +1,37 @@
-function tabuada(){
-    var inum = document.getElementById('inum')
-    var area = document.getElementById('itxt')
-    var t = Number(inum.value)
-    
+function contar(){
+    let ini = document.getElementById('txti')
+    let fim = document.querySelector('input#txtf')
+    let passo = document.getElementById('txtp')
+    let res = document.getElementById('res')
 
-    for (var c = 1; c <= 10; c++){
-         var soma = t*c
-         area.innerHTML = `${t}X${c} = ${soma}`
-         
+    if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
+        window.alert('[ERRO] Faltam dados!')
+
+    } else {
+        res.innerHTML = 'Contando: </br>'
+        let i = Number(ini.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
+
+        if(p <= 0){
+            window.alert('Passo Inválido! Considerando Passo 1')
+            p = 1
+
+        }
+        if(i < f) {
+            //Contagem crescente
+            for(let c = i; c <= f; c += p){
+                res.innerText += `${c} \u{1F449}`
+            }
+
+        } else {
+            //Contagem decrescente
+            for(let c = i; c >= f; c -= p){
+                res.innerText += `${c} \u{1F449}`
+            }  
+        }
+        
+        res.innerHTML += `\u{1F3C1}`
     }
-    
+   
 }

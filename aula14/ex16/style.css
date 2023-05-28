@@ -20,11 +20,8 @@ section {
 }
 
 div {
-    padding: 8px;
-}
 
-div#res > textarea#itxt {
-   
+    padding: 8px;
 }
 
 footer{
