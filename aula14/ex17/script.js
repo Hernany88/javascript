@@ -1,14 +1,20 @@
 function tabuada(){
     var inum = document.getElementById('inum')
     var area = document.getElementById('itxt')
-    var t = Number(inum.value)
-    
-
-    for (var c = 1; c <= 10; c++){
-         var soma = t*c
-         area.innerHTML += `${t}X${c} = ${soma}\n`
-        
-         
+    if(inum.value.length == 0){
+        window.alert('Digite um número')
+    } else {
+        var t = Number(inum.value)
+        let c = 1
+        area.innerHTML = ''
+        while (c <= 10){
+            let item = document.createElement('option')
+            item.text = `${t} X ${c} = ${t*c}`
+            item.value = `tab${c}`
+            area.appendChild(item)
+            c++
+        }
     }
+   
     
 }
