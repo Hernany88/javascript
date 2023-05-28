@@ -6,7 +6,8 @@ function tabuada(){
 
     for (var c = 1; c <= 10; c++){
          var soma = t*c
-         area.innerHTML = `${t}X${c} = ${soma}`
+         area.innerHTML += `${t}X${c} = ${soma}\n`
+        
          
     }
     
