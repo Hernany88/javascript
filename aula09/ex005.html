@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeiro codigo</title>
+    <title>Primeiros passos com DOM</title>
     <style>
-        body {
-            background-color: rgb(238, 129, 89);
+        body{
+            background-color: rgb(46, 169, 218);
             color: white;
-            font: normal 20pt arial;
+            font: normal 18pt Arial;
+            
         }
     </style>
 </head>
-<body >
-    <h1>Olá, mundo!</h1>
-    <p>Já me livrei da maldição</p>
+<body id="e">
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div class="msg">
+        Clique em mim
+    </div>
     <script>
-      var n1 = Number(window.prompt('Digite um número'))
-      var n2 = Number(window.prompt('Digite outro número'))
-      var soma = n1 + n2
-      window.alert(`A soma dos valores é ${(soma).toString()}`)
+        var p1 = window.document.getElementsByTagName('p')[1]
+        //var d = window.document.getElementById('msg')
+        //var d = window.document.getElementsByName('msg')[0]
+        var d = window.document.querySelector('div.msg')
+        window.document.body.style.background = 'blue'
+        p1.style.color = 'white'
+        window.document.write('Está escrito assim: '+ p1.innerHTML)
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        
     </script>
-      
 </body>
 </html>
